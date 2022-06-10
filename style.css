@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 480px for mobile */
+/* 768px for tablets */
+/* 960px for laptops */
+/* 1080px for bigger screens */
+/* 1200px for large screens */
+
+.gallery {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  justify-items: center;
+  justify-content: center;
+}
+
+/* figure:nth-child(1) {
+  order: 2;
+  background-color: red;
+}
+figure:nth-child(2) {
+  order: 1;
+}
+figure:nth-child(3) {
+  order: 3;
+}
+figure:nth-child(4) {
+  order: 4;
+}
+figure:nth-child(5) {
+  order: 5;
+}
+figure:nth-child(6) {
+  order: 6;
+} */
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 0 20px lavender;
+  padding-bottom: 1rem;
+  background-color: black;
+  color: white;
+}
+
+figure:hover {
+  box-shadow: 0 0 25px rgb(208, 208, 219);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+figure > img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 300px;
+}
+
+figcaption {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-family: "Metal Mania", cursive;
+  width: 100%;
+  /* text-align: right; */
+  /* border: 1px solid red; */
+  /* animation-name: slide;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform: translateX(200px); */
+  transition: transform;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+  transform: translateX(0);
+}
+
+figcaption:hover {
+  transform: translateX(200px);
+}
+
+/* @keyframes slide {
+  0% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} */
+
+.heading {
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+  /* .gallery {
+    grid-template-columns: 1fr;
+  } */
+}
